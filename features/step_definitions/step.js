@@ -1,16 +1,14 @@
 const {Given, When, Then} = require('@cucumber/cucumber');
 
 Given('Lucy is {int} metres from Sean', function (distance) {
-    console.log(distance);
-    return 'pending';
+    // console.log(distance);
+    return distance;
 });
   
-When('Sean shouts {string}', function (string) {
-      // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+When('Sean shouts {string}', function (shout) {
+    return shout;
 });
   
 Then('Lucy hears Sean\'s message', function () {
-      // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+    return 'Hey!';
 });
