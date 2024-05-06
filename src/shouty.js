@@ -11,7 +11,11 @@ class Person{
     };
 
     shout = (message) => {
+        this.network.broadcast(message);
+    };
 
+    hear = (message) => {
+        this.messages.push(message);
     };
 
     messagesHeard = () => {
