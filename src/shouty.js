@@ -4,7 +4,7 @@ class Person{
         this.network = network;
 
         this.network.subscribe(this);
-    }
+    };
 
     moveTo = (distance) => {
 
@@ -15,7 +15,7 @@ class Person{
     };
 
     messagesHeard = () => {
-        return this.message;
+        return this.messages;
     };
 };
 
