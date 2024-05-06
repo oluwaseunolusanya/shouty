@@ -1,5 +1,10 @@
 class Person{
-    message = " ";
+    constructor(network){
+        this.messages = [];
+        this.network = network;
+
+        this.network.subscribe(this);
+    }
 
     moveTo = (distance) => {
 
@@ -15,7 +20,20 @@ class Person{
 };
 
 class Network{
+    constructor(){
+        this.listeners = [];
+    };
 
+    subscribe(person){
+        this.listeners.push(person);
+    };
+
+    broadcast(message){
+        this.listeners.forEach(listener => {listener.hear(message)});
+    };
 };
 
-module.exports = { Person, Network };
+module.exports = { 
+    Person : Person, 
+    Network : Network
+};

@@ -1,4 +1,4 @@
-Feature: Hear shout
+Feature: Shout
 
     Scenario: Listener is within range
         Given Lucy is 15 metres from Sean
