@@ -1,14 +1,17 @@
 class Person{
+    message = " ";
+
     moveTo = (distance) => {
 
     };
 
     shout = (message) => {
-
+        return message;
     };
 
     messagesHeard = () => {
-        return [];
+        this.message = this.shout(message);
+        return this.message;
     };
 };
 
